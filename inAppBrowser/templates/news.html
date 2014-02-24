@@ -1,0 +1,26 @@
+<!--
+  This template loads for the 'tab.pet-detail' state (app.js)
+  'pet' is a $scope variable created in the PetCtrl controller (controllers.js)
+  The PetCtrl pulls data from the Pets service (service.js)
+  The Pets service returns an array of pet data
+-->
+<view title="'Cambodia News'">
+  <content has-header="true" padding="true">
+    <div class="list">
+    	<h3 ng-show="allIsFav.length>0">ពេញចិត្ត</h3>
+		<a ng-repeat="news in allIsFav" class="item item-icon-left" ng-click="onTap(news.url)">
+            <img class="icon" src="{{news.logo}}">
+            <h2>{{news.title}}</h2>
+            <!-- <p>{{news.description}}</p> -->
+            <button ng-click="onFav($event, news.id)" class="btn-fav button icon-left ion-star button-positive"></button>
+      	</a>
+      <hr ng-show="allIsFav.length>0" align="center" color="#CCCCCC"/>
+      <a ng-repeat="news in allNotFav" class="item item-icon-left" ng-click="onTap(news.url)">
+        <img class="icon" src="{{news.logo}}">
+        <h2>{{news.title}}</h2>
+        <!-- <p>{{news.description}}</p> -->
+        <button ng-click="onFav($event, news.id)" class="btn-fav button icon-left ion-star"></button>
+      </a>
+    </div>
+  </content>
+</view>

@@ -1,0 +1,26 @@
+<!-- 
+  This template gets placed in the Pet tab's <nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+
+<view title="'Cambodia News'">
+  <content has-header="true" padding="true">
+    <div class="list">
+    	<h3>ពេញចិត្ត</h3>
+		<a ng-repeat="job in all | filter:{isFav:true}" class="item item-icon-left" ng-click="onTap(job.url)">
+            <img class="icon" src="{{job.logo}}">
+            <h2>{{job.title}}</h2>
+            <p>{{job.description}}</p>
+            <button ng-click="onFav($event, job.id)" class="btn-fav button icon-left ion-star button-positive"></button>
+      	</a>
+      <hr align="center" color="#CCCCCC"/>
+      <a ng-repeat="job in all | filter:{isFav:false}" class="item item-icon-left" ng-click="onTap(job.url)">
+        <img class="icon" src="{{job.logo}}">
+        <h2>{{job.title}}</h2>
+        <p>{{job.description}}</p>
+        <button ng-click="onFav($event, job.id)" class="btn-fav button icon-left ion-star"></button>
+      </a>
+    </div>
+  </content>
+</view>

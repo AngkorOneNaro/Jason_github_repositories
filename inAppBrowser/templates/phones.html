@@ -1,0 +1,14 @@
+<!--
+  This template loads for the 'tab.adopt' state (app.js)
+-->
+<view title="'Phone Shop'">
+  <content has-header="true" padding="true">
+    <div class="list">
+      <a ng-repeat="phone in all" class="item item-icon-left" href="#/main/news">
+        <img class="icon" src="{{phone.logo}}">
+        <h2>{{phone.title}}</h2>
+        <p>{{phone.description}}</p>
+      </a>
+    </div>
+  </content>
+</view>

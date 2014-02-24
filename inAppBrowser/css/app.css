@@ -1,0 +1,55 @@
+/* Your app's CSS, go crazy, make it your own */
+@font-face {
+    font-family: 'NokoraRegularRegular';
+    src: url('nokora-regular.eot');
+    src: url('nokora-regular.eot') format('embedded-opentype'),
+         url('nokora-regular.woff') format('woff'),
+         url('nokora-regular.ttf') format('truetype'),
+         url('nokora-regular.svg#NokoraRegularRegular') format('svg');
+}
+
+html, body, h1, h2, h3, p
+{
+	font-family: NokoraRegularRegular !important;
+}
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+.list a
+{
+	padding-left: 110px;
+	fack-min-height: 110px;
+}
+
+.list a .icon
+{
+	max-width: 100px;
+	height: auto;
+}
+.list a p
+{
+	white-space: normal;
+	width: 96%;
+}
+
+.list a h2
+{
+	font-size: 120%;
+	width: 96%;
+}
+a.item:after
+{
+	display:none;
+}
+
+.btn-fav
+{
+	height:100%;
+	position:absolute;
+	right:0;
+	top:0;
+}
